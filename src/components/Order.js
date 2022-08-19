@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 
-const Order = ({ orders }) => {
+const Order = ({ orders, products, users }) => {
   return (
     <div>
-      <h1 className="text-center m-6 text-2xl font-extrabold">Products</h1>
+      <h1 className="text-center m-6 text-2xl font-extrabold">Order</h1>
       <div class="overflow-x-auto">
         <table class="table w-full">
           {/* <!-- head --> */}

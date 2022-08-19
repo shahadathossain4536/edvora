@@ -1,18 +1,24 @@
 import React, { Children } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = ({ children }) => {
   const menuItem = (
     <>
       <>
         <li>
-          <Link to="/">Products</Link>
+          <NavLink className="mr-2 rounded-md" to="/">
+            Products
+          </NavLink>
         </li>
         <li>
-          <Link to="/order">Order</Link>
+          <NavLink className="mr-2 rounded-md" to="/order">
+            Order
+          </NavLink>
         </li>
         <li>
-          <Link to="/user">User</Link>
+          <NavLink className="mr-2 rounded-md" to="/user">
+            User
+          </NavLink>
         </li>
       </>
     </>
@@ -40,7 +46,9 @@ const Navbar = ({ children }) => {
               </svg>
             </label>
           </div>
-          <div class="flex-1 px-2 mx-2">Navbar Title</div>
+          <div class="flex-1 px-2 mx-2 text-4xl hover:sky-400 cursor-pointer">
+            Dashboard
+          </div>
           <div class="flex-none hidden lg:block">
             <ul class="menu menu-horizontal">
               {/* <!-- Navbar menu content here --> */}
@@ -56,12 +64,7 @@ const Navbar = ({ children }) => {
         <label for="my-drawer-3" class="drawer-overlay"></label>
         <ul class="menu p-4 overflow-y-auto w-80 bg-base-100">
           {/* <!-- Sidebar content here --> */}
-          <li>
-            <a>Sidebar Item 1</a>
-          </li>
-          <li>
-            <a>Sidebar Item 2</a>
-          </li>
+          {menuItem}
         </ul>
       </div>
     </div>

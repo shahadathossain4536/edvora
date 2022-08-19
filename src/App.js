@@ -33,7 +33,11 @@ function App() {
       <Navbar>
         <Routes>
           <Route path="/" element={<Products products={products} />} />
-          <Route path="/order" element={<Order orders={orders} />} />
+          <Route
+            path="/order"
+            element={<Order orders={orders} users={users} />}
+            products={products}
+          />
           <Route path="/user" element={<Users users={users} />} />
         </Routes>
       </Navbar>
